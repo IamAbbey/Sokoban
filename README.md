@@ -1,6 +1,10 @@
 # Sokoban
 
-A new Flutter project.
+
+![sokoban](https://user-images.githubusercontent.com/61361540/116770006-4d7f2200-aa38-11eb-830b-2e3701f3d348.gif)
+
+
+
 
 ## Getting Started
 
