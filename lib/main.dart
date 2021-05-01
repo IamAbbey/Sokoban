@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sokoban',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: GameScreen(),
@@ -124,11 +124,13 @@ class _GameScreenState extends State<GameScreen> {
   void checkIfWin() async {
     buildBoard();
     List<int> currentBrickPosition = [];
-    board.asMap().forEach((index, element) {
-      if (element == 'B') {
-        currentBrickPosition.add(index);
-      }
-    });
+    board.asMap().forEach(
+      (index, element) {
+        if (element == 'B') {
+          currentBrickPosition.add(index);
+        }
+      },
+    );
     currentBrickPosition.sort();
     if (listEquals(currentBrickPosition, foodPositionList)) {
       setState(() {
@@ -204,7 +206,9 @@ class _GameScreenState extends State<GameScreen> {
             Text(
               'Level ${currentStage + 1}',
               style: TextStyle(
-                  color: Colors.yellow[700], fontWeight: FontWeight.bold),
+                color: Colors.yellow[700],
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -248,12 +252,6 @@ class _GameScreenState extends State<GameScreen> {
                               );
                             }
                             return Container();
-                            // return Center(
-                            //   child: Text(
-                            //     e,
-                            //     style: TextStyle(color: Colors.white),
-                            //   ),
-                            // );
                           }).toList(),
                         ),
                       ),

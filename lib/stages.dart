@@ -15,12 +15,6 @@ class Stages {
 }
 
 List<Stages> stages = [
-  // Stages(
-  //   staticIndexList: [],
-  //   bricksStartPosition: [],
-  //   foodPositionList: [],
-  //   playerStartIndex: 9,
-  // ),
   Stages(
     staticIndexList: [
       2,
